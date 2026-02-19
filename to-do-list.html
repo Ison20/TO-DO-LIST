@@ -46,11 +46,23 @@
         <ul id="task-list" class="task-list">
         </ul>
 
-        <div id="footer" class="footer">
-            <p>&copy; 2026 My To-Do List. All rights reserved.</p>
+        <div id="empty-state" class="empty-state">
+            <i class="fas fa-clipboard-list"></i>
+            <p>Empty kabisa yaani! Weka tasks tufanye</p>
         </div>
 
-
+        <div id="filter-buttons" class="filter-buttons">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button class="filter-btn" id="clear-completed">Clear Completed</button>
+        </div>
     </div>
+
+
+    <div id="footer" class="footer">
+        <p>&copy; 2026 My To-Do List. All rights reserved.</p>
+    </div>
+
 </body>
 </html>
