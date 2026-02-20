@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color: #f8fafc;
+    background-color: #e7f0f8;
     display: flex;
     min-height: 100dvh;
     justify-content: center;
@@ -10,7 +10,7 @@ body {
 
 .container {
     width: 100%;
-    margin: 0 auto;
+    margin: auto;
     max-width: 600px;
     background-color: #ffffff;
     border-radius: 16px;
@@ -20,17 +20,20 @@ body {
 }
 
 .header {
+    flex:auto;
     display: flex;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 5px;
+    justify-content: space-around;
 }
 
 .header h1 {
-    font-size: 24px;
+    font-size: 36px;
     align-items: center;
     display: flex;
     color: #6366f1;
-    gap: 10px
+    gap:10px;
+    margin-left: -20px;
 }
 
 .theme-btn {
@@ -40,6 +43,7 @@ body {
     transition: hover 0.3s ease;
     color: #1e293b;
     padding: 10px 14px;
+    margin-right: -20px;
     transition: hover 0.3s ease;
 }
 
@@ -54,7 +58,47 @@ body {
     padding: 16px;
     border-radius: 12px;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-.
+.stats-count {
+    text-align: center;
+}
+
+.stats-number {
+    display: block;
+    font-size: 0.7cm;
+    font-weight: 500;
+    color: #6366f1;
+}
+
+.stats-label {
+    font-size: 0.5cm;
+    color: #4c5b70;
+    letter-spacing: 0.5px;
+}
+
+.input {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    border-radius: 12px;
+    padding: 10px;
+    transition: hover 0.3s ease;
+    background: #f1f5f9;
+}
+
+#task-input {
+    background: transparent;
+    font-size: 0.5cm;
+    border: none;
+    color: #1e293b;
+    border-radius: 6px;
+    flex: auto;
+}
+
+#task-input::placeholder {
+    color: #83868a;
+}
+
+.add-btn
