@@ -14,7 +14,7 @@ body {
     max-width: 600px;
     background-color: #ffffff;
     border-radius: 16px;
-    padding: 54px;
+    padding: 44px;
     margin-top: 20px;
     transition: hover 0.3s ease;
 }
@@ -28,7 +28,7 @@ body {
 }
 
 .header h1 {
-    font-size: 36px;
+    font-size: 45px;
     align-items: center;
     display: flex;
     color: #6366f1;
@@ -45,6 +45,8 @@ body {
     padding: 10px 14px;
     margin-right: -20px;
     transition: hover 0.3s ease;
+    font-size: 0.5cm;
+    cursor: pointer;
 }
 
 .theme-btn:hover {
@@ -101,4 +103,82 @@ body {
     color: #83868a;
 }
 
-.add-btn
+.add-btn {
+    background-color: #d9e6f1;
+    border-color: #c8cfda;
+    border-radius: 10px;
+    transition: hover 0.3s ease;
+    color: #1e293b;
+    padding: 10px 14px;
+    transition: hover 0.3s ease;
+    font-size: 0.5cm;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: #6c66da;
+    color: #e0e7ff;
+}
+
+.tasks-list {
+    margin-bottom: 20px;
+}
+
+/*.tasks-list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: #f1f5f9;
+}*/
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #64748b;
+}
+
+.empty-state i {
+    font-size: 2cm;
+}
+
+.empty-state p {
+    font-size: large;
+}
+
+.filter-btns {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-btn {
+    border-radius: 8px;
+    border: none;
+    font-size: medium;
+    padding: 5px;
+    color: #1e293b;
+    transition: hover 0 ease;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    background: #a5a1f7;
+
+}
+.clear-btn {
+    border-radius: 8px;
+    border: none;
+    font-size: medium;
+    padding: 5px;
+    color: red;
+    cursor: pointer;
+}
+
+.clear-btn:hover {
+    background: rgb(240, 154, 154);
+}
+
+.footer {
+    text-align: center;
+    padding:8px 12px;
+}
