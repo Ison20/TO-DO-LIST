@@ -1,3 +1,31 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body {
     font-family: sans-serif;
     background-color: #e7f0f8;
@@ -183,4 +211,12 @@ body {
     padding:8px 12px;
     margin-top: 20px;
     color: #2d394d;
+}
+
+[theme-view="dark"] {
+    body {
+    background: 0f172a;
+    }
+
+
 }
