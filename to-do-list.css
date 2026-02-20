@@ -37,7 +37,7 @@ body {
 }
 
 .theme-btn {
-    background-color: #f1f5f9;
+    background-color: #ffffff, #f1f5f9;
     border: none;
     border-radius: 10px;
     transition: hover 0.3s ease;
