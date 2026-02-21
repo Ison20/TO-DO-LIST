@@ -3,7 +3,7 @@
     --primary-surface: #ffffff;
     --secondary-surface: #eceff3;
     --primary-color: #6366f1;
-    --text-primary: #ffffff;
+    --text-primary: #000000;
     --text-secondary: #707a88;
     --clear: red;
     --clear-hover: rgb(231, 59, 59);
@@ -86,7 +86,7 @@ body {
 
 .theme-btn:hover {
     background-color: var(--primary-color);
-    color: var(--text-primary);
+    color: var(--primary-surface);
 }
 
 .stats {
@@ -152,7 +152,7 @@ body {
 
 .add-btn:hover {
     background-color: var(--primary-color);
-    color: var(--text-primary);
+    color: var(--primary-surface);
 }
 
 .tasks-list {
