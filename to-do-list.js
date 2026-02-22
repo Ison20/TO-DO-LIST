@@ -7,6 +7,7 @@ const addBtn = document.getElementById('add-Btn');
 const tasksList = document.getElementById('tasks-list');
 const emptyState = document.getElementById('empty-state');
 const clearCompleted = document.getElementById('clear-completed');
+const filterBtns = document.querySelectorAll('.filter-btn');
 
 let tasks = [];
 let currentFilter = 'all'
@@ -151,4 +152,14 @@ clearCompleted.addEventListener('click', () => {
     saveTasks();
     renderTasks();
     updateStats();
+})
+
+// filter tasks
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(btn => btn.classList.remove('chaguo'));
+        btn.classList.add('chaguo');
+        currentFilter = btn.dataset.filter();
+        renderTasks();
+    });
 })
