@@ -38,7 +38,6 @@ body {
     font-family: sans-serif;
     background-color: var(--background);
     display: flex;
-    min-height: 100dvh;
     justify-content: center;
     padding: 1.2rem;
     transition: background-color 0.3s ease;
