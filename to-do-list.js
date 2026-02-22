@@ -54,6 +54,19 @@ taskInput.addEventListener('keypress', (e) => {
 });
 
 //Add a new task function
+function addTask() {
+    if (taskInput.value) {
+        const newTask = {
+            id: Date.now(),
+            text: taskInput.value.trim(),
+            completed: false
+        };
+        tasks.unshift(newTask);
+        saveTasks();
+        renderTasks();
+        updateStats();
+    }
+};
 
 
 // Save a task
