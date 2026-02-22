@@ -69,7 +69,7 @@ function loadTasks() {
         renderTasks();
         updateStats();
     }
-    localStorage.getItem('tasks', JSON.parse(tasks));
+    localStorage.getItem('tasks'.JSON.parse(tasks));
 }
 
 loadTasks();
