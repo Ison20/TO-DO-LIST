@@ -10,17 +10,17 @@ const clearCompleted = document.getElementById('clear-completed');
 const filterBtns = document.querySelectorAll('.filter-btn');
 
 let tasks = [];
-let currentFilter = 'all'
+let currentFilter = 'all';
 
 // Activating dark mode
 themeBtn.addEventListener('click', () => {
     if (document.documentElement.getAttribute('theme-view') !== 'dark'){
         document.documentElement.setAttribute('theme-view', 'dark');
-        themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
         localStorage.setItem('theme', 'dark');
     } else {
         document.documentElement.removeAttribute('theme-view');
-        themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
         localStorage.setItem('theme', 'light');
     }
 });
@@ -55,7 +55,7 @@ taskInput.addEventListener('keypress', (e) => {
 
 //Add a new task function
 function addTask() {
-    if (taskInput.value) {
+    if (taskInput.value.trim) {
         const newTask = {
             id: Date.now(),
             text: taskInput.value.trim(),
@@ -65,6 +65,7 @@ function addTask() {
         saveTasks();
         renderTasks();
         updateStats();
+        taskInput.value = '';
     }
 };
 
@@ -82,7 +83,6 @@ function loadTasks() {
         renderTasks();
         updateStats();
     }
-    localStorage.getItem('tasks'.JSON.parse(tasks));
 }
 
 loadTasks();
@@ -99,9 +99,9 @@ function renderTasks() {
     }
 
     if (filteredTasks.length === 0) {
-        emptyState.classList.add('visible');
+        emptyState.style.display = 'block';
     } else {
-        emptyState.classList.remove('visible');
+        emptyState.style.display = 'none'
         filteredTasks.forEach((task) => {
             const li = document.createElement('li');
             li.className = 'task-item';
@@ -111,17 +111,14 @@ function renderTasks() {
                 <i class= "fas fa-trash"></i>
             </button> `;
 
-            li.querySelector('.task-text').addEventListener('click', () => {
-                taskCompletion(task.id)
-            });
+            li.querySelector('.task-text').addEventListener('click', () => taskCompletion(task.id));
 
-            li.querySelector('.delete-btn').addEventListener('click', () => {
-                deleteTask(task.id);
-            });
-        filteredTasks.appendChild(li);
+            li.querySelector('.delete-btn').addEventListener('click', () => deleteTask(task.id));
+        tasksList.appendChild(li);
         });
     }
 }
+
 
 // Task completion function
 function taskCompletion(id) {
@@ -159,7 +156,7 @@ clearCompleted.addEventListener('click', () => {
     saveTasks();
     renderTasks();
     updateStats();
-})
+});
 
 // filter tasks
 filterBtns.forEach(btn => {
@@ -169,6 +166,6 @@ filterBtns.forEach(btn => {
         currentFilter = btn.dataset.filter;
         renderTasks();
     });
-})
+});
 
 document.querySelector('[data-filter="all"]').classList.add('chaguo');
