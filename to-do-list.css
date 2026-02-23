@@ -48,7 +48,7 @@ body {
     max-width: 600px;
     background-color: var(--primary-surface);
     border-radius: 1rem;
-    padding: 3rem;
+    padding: min(3rem, 8%);
     margin-top: 1rem;
     transition: all 0.3s ease;
     box-shadow: var(--shadow);
@@ -64,7 +64,7 @@ body {
 }
 
 .header h1 {
-    font-size: clamp(2rem, 6vw, 3rem);
+    font-size: clamp(2.5rem, 2.5vw, 3rem);
     align-items: center;
     display: flex;
     color: var(--primary-color);
@@ -91,7 +91,7 @@ body {
 .stats {
     display: flex;
     background: var(--secondary-surface);
-    padding: 0.7rem;
+    padding: 0.7rem, 15%;
     border-radius: 0.75rem;
     justify-content: space-around;
     margin-bottom: 1.8rem;
@@ -275,7 +275,7 @@ body {
 
 @media (max-width: 600px) {
     .container {
-        min-width: 0rem;
+        min-width: 22rem;
         padding: 1.5rem;
         border-radius: 12px;
     }
