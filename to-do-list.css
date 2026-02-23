@@ -158,18 +158,49 @@ body {
     margin-bottom: 20px;
 }
 
-/*.tasks-list {
+.tasks-item {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 12px;
     padding: 14px 16px;
-    background: #f1f5f9;
-}*/
+    background: var(--secondary-surface);
+    margin-bottom: 10px;
+    border-radius: 0.6rem;
+    transition: all 0.3s ease;
+}
+
+.task-text {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 0.4rem;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: var(--clear-bg);
+    color: var(--clear);
+}
 
 .empty-state {
     text-align: center;
     padding: 2rem 1rem;
     color: var(--text-secondary);
+    display: block;
 }
 
 .empty-state i {
@@ -244,8 +275,9 @@ body {
 
 @media (max-width: 600px) {
     .container {
-        min-width: 417px;
+        min-width: 0rem;
         padding: 1.5rem;
+        border-radius: 12px;
     }
 
     .stats {
@@ -259,5 +291,46 @@ body {
 
     .add-btn {
         width: 100%;
+    }
+
+    .header h1 {
+        font-size: 1.4rem;
+    }
+
+    .stats-number {
+        font-size: 1.25rem;
+    }
+
+    .stats {
+        padding: 12px;
+    }
+
+    .input {
+        padding: 4px;
+    }
+    #task-input {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .add-btn {
+        padding: 10px 14px;
+    }
+
+    .task-item {
+        padding: 12px;
+    }
+
+    .task-text {
+        font-size: 0.9rem;
+    }
+
+    .filter-buttons {
+        gap: 6px;
+    }
+
+    .filter-btn, .clear-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
     }
 }
